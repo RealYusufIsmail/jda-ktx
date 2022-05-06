@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>getOption</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../index.html">
+                    <span>jda-ktx</span>
+            </a>
+    </div>
+    <div>
+0.9.0-alpha.11    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="jda-ktx::dev.minn.jda.ktx.interactions.components//getOption/net.dv8tion.jda.api.interactions.commands.CommandInteractionPayload#kotlin.String/PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../index.html">jda-ktx</a><span class="delimiter">/</span><a href="index.html">dev.minn.jda.ktx.interactions.components</a><span class="delimiter">/</span><a href="get-option.html">getOption</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>get</span><wbr></wbr><span><span>Option</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-option.html">T</a><span class="token operator">&gt; </span><a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/CommandInteractionPayload.html">CommandInteractionPayload</a><span class="token punctuation">.</span><a href="get-option.html"><span class="token function">getOption</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-option.html">T</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Get an option value by name and resolve it to the desired type. You can use the not-null assertion operator <code class="lang-kotlin">!!</code> for required options which should never be null: <code class="lang-kotlin">getOption&lt;User&gt;(&quot;user&quot;)!!</code></p><p class="paragraph">This is equivalent to <code class="lang-kotlin">getOption(name) { it.getAsT() }</code></p><p class="paragraph">This supports the following types:</p><ul><li><p class="paragraph"><a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/entities/User.html">User</a> and <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/entities/Member.html">Member</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#USER">OptionType.USER</a></p></li><li><p class="paragraph"><a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/entities/Role.html">Role</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#ROLE">OptionType.ROLE</a></p></li><li><p class="paragraph"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html">Integer</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#INTEGER">OptionType.INTEGER</a></p></li><li><p class="paragraph"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#NUMBER">OptionType.NUMBER</a></p></li><li><p class="paragraph"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#BOOLEAN">OptionType.BOOLEAN</a></p></li><li><p class="paragraph"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#STRING">OptionType.STRING</a></p></li><li><p class="paragraph"><a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/entities/Message.Attachment.html">Message.Attachment</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#ATTACHMENT">OptionType.ATTACHMENT</a></p></li><li><p class="paragraph"><a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/entities/IMentionable.html">IMentionable</a> from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#MENTIONABLE">OptionType.MENTIONABLE</a></p></li><li><p class="paragraph">Any <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/entities/GuildChannel.html">GuildChannel</a> type from <a href="https://ci.dv8tion.net/job/JDA5/javadoc/net/dv8tion/jda/api/interactions/commands/OptionType.html#CHANNEL">OptionType.CHANNEL</a></p></li></ul><h4 class="">Return</h4><p class="paragraph">The resolved option value as the given type, or null if the option is not provided by the user</p><h2 class="">Throws</h2><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-no-such-element-exception/index.html"><span>kotlin.</span><wbr></wbr><span>No</span><wbr></wbr><span>Such</span><wbr></wbr><span>Element</span><wbr></wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">    If a type is unsupported</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div></div></div></div></div></div>
+  <h2 class="">Sources</h2>
+  <div class="table" data-togglable="Sources"><a data-name="1427920208%2FSource%2F769193423" anchor-label="https://github.com/MinnDevelopment/jda-ktx/tree/master/src/main/kotlin/dev/minn/jda/ktx/interactions/components/utils.kt#L25" id="1427920208%2FSource%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="main-subrow keyValue ">
+        <div class=""><span class="inline-flex">
+            <div><a href="https://github.com/MinnDevelopment/jda-ktx/tree/master/src/main/kotlin/dev/minn/jda/ktx/interactions/components/utils.kt#L25">jvm source</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1427920208%2FSource%2F769193423"></span>
+              <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+            </span></span></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright © 2020 Florian Spieß</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
