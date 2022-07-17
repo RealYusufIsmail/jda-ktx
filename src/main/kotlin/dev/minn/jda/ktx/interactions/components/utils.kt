@@ -17,6 +17,7 @@
 package dev.minn.jda.ktx.interactions.components
 
 import net.dv8tion.jda.api.entities.*
+import net.dv8tion.jda.api.entities.channel.middleman.GuildChannel
 import net.dv8tion.jda.api.interactions.commands.CommandInteractionPayload
 import net.dv8tion.jda.api.interactions.commands.OptionMapping
 import net.dv8tion.jda.api.interactions.commands.OptionType
@@ -68,5 +69,4 @@ inline fun <reified T> CommandInteractionPayload.getOption(name: String): T? = w
             throw NoSuchElementException("Type ${T::class.java.simpleName} is unsupported for getOption(name) resolution. Try updating or using a different type!")
         }
     }
-
 }
